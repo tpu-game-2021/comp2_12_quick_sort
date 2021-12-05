@@ -7,6 +7,9 @@
 bool quick_sort(item* begin, const item* end)
 {
 	// ToDo: クイックソートで並び替えてください
-
+	int temp,x,a[10],i;
+	temp = a[x];
+	a[x] = a[i];
+	a[i] = temp;
 	return false;
 }
