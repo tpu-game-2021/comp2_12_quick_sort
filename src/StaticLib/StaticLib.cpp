@@ -6,7 +6,26 @@
 // クイックソート(引数が不適切であればfalseを返す)
 bool quick_sort(item* begin, const item* end)
 {
+	item;
 	// ToDo: クイックソートで並び替えてください
 
-	return false;
+	
+		
+		if (begin->key > end->key)
+		{
+			return 1;
+		}
+		else if (begin->key < end->key)
+		{
+			return -1; 
+		}
+		if (begin->key == NULL && end->key == NULL)
+		{
+			return false;
+		}
+		else
+		{
+			return false;
+		}
+	
 }
