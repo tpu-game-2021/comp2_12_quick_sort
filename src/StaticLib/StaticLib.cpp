@@ -14,7 +14,7 @@ bool quick_sort(item* begin, const item* end)
 	int right = (end - begin)-1;
 
 	while (1)
-	{
+	{ 
 		int a = left;
 		int z = right;
 	    int pivot = begin[(a + z) / 2].key; //基準の値を設定する。
