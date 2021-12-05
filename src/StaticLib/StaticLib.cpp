@@ -8,7 +8,7 @@ bool quick_sort(item* begin, const item* end)
 {
 	// ToDo: クイックソートで並び替えてください
 	if (end - begin < 0)return false;
-	if (end == NULL || begin == NULL)return false;
+	if (end==NULL||begin==NULL)return false;
 	int pivot;
 	item tmp;
 	int i, j;
