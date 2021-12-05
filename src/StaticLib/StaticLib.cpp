@@ -16,13 +16,9 @@ bool quick_sort(item* begin, const item* end)
 	if (end - begin < 0)return false;
 	if (end==NULL||begin==NULL)return false;
 	int pivot;
-	item tmp;
 	int i, j;
 	j =  (end - begin)-1;
 	i = 1;
-	//tmp = begin[0];
-	//begin[0] = begin[(end-begin)/2];
-	//begin[(end - begin) / 2] = tmp;
 	swap(begin, begin+(end - begin) / 2);
 	pivot = begin[0].key;
 	if (end - begin <= 1)
@@ -35,16 +31,10 @@ bool quick_sort(item* begin, const item* end)
 			i++;
 		if (j <= i)
 			break;
-		//tmp = begin[j];
-		//begin[j] = begin[i];
-		//begin[i] = tmp;
 		swap(begin + i, begin + j);
 		j--;
 		i++;
 	}
-	//tmp = begin[j];
-	//begin[j] = begin[0];
-	//begin[0] = tmp;
 	swap(begin, begin+j);
 	quick_sort(begin, begin+j);
 	quick_sort(begin+j+1, end);
