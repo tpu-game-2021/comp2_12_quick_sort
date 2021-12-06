@@ -3,9 +3,9 @@
 
 #include "../include/lib_func.h"
 
-void Swap(int x[], int i, int j)
+void Swap(item x[], int i, int j)
 {
-	int temp;
+	item temp;
 
 	temp = x[i];
 	x[i] = x[j];
@@ -19,8 +19,8 @@ bool quick_sort(item* begin, const item* end)
 	// ToDo: クイックソートで並び替えてください
 
 	
-	int* MiddleNumber;
-	int *left, *right;
+	int MiddleNumber;
+	int left, right;
 
 	left = begin->key;
 
@@ -37,7 +37,7 @@ bool quick_sort(item* begin, const item* end)
 		if (left >= right)break;
 
 
-		Swap(begin[left].key, left, right);
+		Swap(begin, left, right);
 		left++;
 		right--;
 
@@ -45,10 +45,10 @@ bool quick_sort(item* begin, const item* end)
 		
 	}
 
-	if (left < left - 1)
-		quick_sort(left, left - 1);
-	if (right + 1 < right)
-		quick_sort(right + 1, right);
+	//if (left < left - 1)
+	//	quick_sort(left, left - 1);
+	//if (right + 1 < right)
+	//	quick_sort(right + 1, right);
 
-	return false;
+	return true;
 }
